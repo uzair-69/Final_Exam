@@ -1,30 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-import {f} from './components/footer';
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Routes } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import HeroSection from './components/HeroSection';
+import Section from './components/Section2';
+import Future from './components/Future';
+
 
 
 function App() {
   return (
 
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+    <Header />
+    <HeroSection />
+    <Section />
+    <Future />
+    <Routes>
 
-      <f />
-    </div>
-
+    </Routes>
+    <Footer />
+  </div> 
   );
 }
 
